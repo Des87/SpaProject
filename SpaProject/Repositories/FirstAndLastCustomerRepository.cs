@@ -18,12 +18,12 @@ namespace SpaProject.Repositories
 
         public async Task<DateTime> FirstCustomer()
         {
-            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == eInorOut.Ki & x.Department == 0).OrderBy(y => y.CheckTime).First().CheckTime);
+            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == EInorOut.Ki & x.Department == 0).OrderBy(y => y.CheckTime).First().CheckTime);
 
         }
         public async Task<DateTime> LastCustomer()
         {
-            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == eInorOut.Ki & x.Department == 0).OrderBy(y => y.CheckTime).Last().CheckTime);
+            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == EInorOut.Ki & x.Department == 0).OrderBy(y => y.CheckTime).Last().CheckTime);
         }
     }
 }

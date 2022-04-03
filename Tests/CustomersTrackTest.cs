@@ -20,7 +20,7 @@ namespace Tests
             string line = "456 0 1 8 12 57";
             Guid guid = Guid.NewGuid();
             DateTime dt = DateTime.Today.AddHours(8).AddMinutes(12).AddSeconds(57);
-            CustomersTrack ct = new(guid,456,eDepartments.Öltöző,eInorOut.Ki,dt);
+            CustomersTrack ct = new(guid,456,EDepartments.Öltöző,EInorOut.Ki,dt);
 
             //Act
             Task<CustomersTrack> s = ctFactory.CreateObject(line);

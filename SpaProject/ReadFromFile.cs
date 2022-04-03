@@ -33,9 +33,9 @@ namespace SpaProject
     }
     public class ReadNoAgain : IRead
     {
-        public async Task<string> ReadAndSave()
+        public Task<string> ReadAndSave()
         {
-            return "A txt adatai már az adatbázisban vannak, a feladatok pontossága érdekében NEM menti bele újra!";
+            return Task.FromResult("A txt adatai már az adatbázisban vannak, a feladatok pontossága érdekében NEM menti bele újra!");
         }
     }
 }

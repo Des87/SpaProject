@@ -18,15 +18,15 @@ namespace SpaProject.Repositories
 
         public async Task<int> Getsixtonine()
         {
-            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == eInorOut.Ki & x.Department == 0 && x.CheckTime < DateTime.Today.AddHours(9)).Count());
+            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == EInorOut.Ki & x.Department == 0 && x.CheckTime < DateTime.Today.AddHours(9)).Count());
         }
         public async Task<int> Getninetosixten()
         {
-            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == eInorOut.Ki & x.Department == 0 && (x.CheckTime > DateTime.Today.AddHours(9) && x.CheckTime < DateTime.Today.AddHours(16))).Count());
+            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == EInorOut.Ki & x.Department == 0 && (x.CheckTime > DateTime.Today.AddHours(9) && x.CheckTime < DateTime.Today.AddHours(16))).Count());
         }
         public async Task<int> Getsixtentotwenty()
         {
-            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == eInorOut.Ki & x.Department == 0 && (x.CheckTime > DateTime.Today.AddHours(16) && x.CheckTime < DateTime.Today.AddHours(20))).Count());
+            return await Task.FromResult(db.CustomersTrack.Where(x => x.InorOut == EInorOut.Ki & x.Department == 0 && (x.CheckTime > DateTime.Today.AddHours(16) && x.CheckTime < DateTime.Today.AddHours(20))).Count());
         }
     }
 }

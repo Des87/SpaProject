@@ -19,7 +19,7 @@ namespace SpaProject.Repositories
 
         public async Task<VisitingTime> LongestTime()
         {
-            var t = db.CustomersTrack.Where(x => x.Department == eDepartments.Öltöző).OrderBy(x => x.CustomerNumber).ThenBy(x => x.CheckTime).ToList();
+            var t = db.CustomersTrack.Where(x => x.Department == EDepartments.Öltöző).OrderBy(x => x.CustomerNumber).ThenBy(x => x.CheckTime).ToList();
             List<VisitingTime> vt = new();
 
             for (int i = 0; i < t.Count; i += 2)
