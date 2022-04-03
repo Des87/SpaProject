@@ -33,3 +33,10 @@ Tesztelhető methódusok
 
 A program a furdoadat.txt file-t is tartalmazza
 
+Használt Nugetek:
+Autofac
+Microsoft.EntityFrameworkCore, sqlite és Tools
+Microsoft.Net.Test.Sdk
+Xunit, runner console és runner visualstudio 
+
+Console applikáció .net6
